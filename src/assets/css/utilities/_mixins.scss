@@ -1,0 +1,64 @@
+/**
+** Media Query - Responsive
+**/
+@mixin device($size) {
+  @if $size==phone-only {
+    @media (max-width: 599px) {
+      @content;
+    }
+  }
+
+  @else if $size==tablet-portrait-up {
+    @media (min-width: 600px) {
+      @content;
+    }
+  }
+
+  @else if $size==tablet-landscape-up {
+    @media (min-width: 900px) {
+      @content;
+    }
+  }
+
+  @else if $size==desktop-up {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  }
+
+  @else if $size==big-desktop-up {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
+}
+
+/**
+** Spacing | take 16px == 1rem
+**/
+$defaultValue: 16;
+$spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $space in $spaceamounts {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space*1/$defaultValue}rem !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space*1/$defaultValue}rem !important;
+    }
+  }
+}
+
+/**
+** Spacing | take 16px == 1rem | 1px = 0.0625rem
+**/ 
+// $fontSizes: (10, 12, 14, 20, 25, 30, 35, 40, 45, 50, 75, 100);
+$remsize: 0.0625;
+  @for $size from 1 through 50 {
+    .font-#{$size} {
+      font-size: #{$size*$remsize}rem !important;
+    } 
+  } 

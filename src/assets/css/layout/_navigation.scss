@@ -1,0 +1,296 @@
+/** Header Navigation ***/
+.ivu-dropdown-item:hover,
+.ivu-select-item:hover {
+  background: $grey-color !important;
+}
+
+.ivu-dropdown-item:hover {
+  &:before {
+    background-color: $default-color;
+  }
+}
+
+.ivu-select-dropdown {
+  box-shadow: 0px 0px 50px 0px rgba(82, 63, 105, 0.15);
+}
+
+
+// Cell Head 
+.navbar-dropdown {
+  .ivu-select-dropdown {
+    padding: 0px;
+
+    .ivu-dropdown-menu {
+      width: 380px;
+      max-width: 380px;
+      text-align: left;
+
+      .cell-head {
+        // background-image: url('https://keenthemes.com/metronic/preview/demo1/components/widgets/assets/media/misc/bg-1.jpg');
+        background: #1572e8 !important;
+        background: -webkit-linear-gradient(legacy-direction(-45deg), #06418e, #1572e8) !important;
+        background: linear-gradient(-45deg, #06418e, #1572e8) !important;
+        background-position: center;
+        background-size: cover;
+        padding: 22px 10px 22px 15px;
+        color: #fff;
+
+        .profile-name {
+          font-weight: 700;
+          font-size: 16px;
+          padding-left: 15px;
+        }
+
+        .profile-avatar.ivu-avatar {
+          width: 60px;
+          height: 60px;
+          line-height: 50px;
+          background: rgba(0, 0, 0, 0.2);
+          font-size: 38px;
+        }
+      }
+    }
+  }
+}
+
+/** Dropdown **/
+.ivu-cell {
+  &.custem-cell-settings {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #f7f8fa;
+
+    &:hover {
+
+      background-color: #f7f8fa;
+
+      .ivu-icon.primary-icon {
+        &.bordred-icon {
+          transition: all 600ms linear;
+          background-color: $default-color;
+          color: #fff;
+        }
+      }
+    }
+
+    .ivu-icon.bordred-icon {
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      background: #f7f8fa;
+      border-radius: 5px;
+    }
+
+    .ivu-cell-title {
+      font-size: .8rem;
+      color: #6c7293;
+      font-weight: 600;
+    }
+
+    .ivu-cell-label {
+      font-size: .75rem;
+      font-weight: 300;
+      color: #adafbd;
+      white-space: initial;
+    }
+  }
+
+  &.custem-cell-spacing {
+    padding: .65rem 1.5rem;
+  }
+}
+
+/** Vertical && Horizontal Navigation ***/
+.ivu-layout {
+  /*** dark layout **/
+  .ivu-menu-dark {
+    background: $dark-bg;
+    letter-spacing: .5px;
+    color: $grey-color;
+  }
+  /** Logo **/
+  .navbar-logo {  
+    background-color: $second-dark-bg;
+    font-size: 1.58rem;
+    vertical-align: middle;
+    text-transform: uppercase;
+    position: relative;
+    height: 64px; 
+    .collapse-icon {
+      font-size: 25px;
+      position: absolute;
+      right: 0px;
+      top:0px; 
+      height: 100%;
+      width: 78px;
+      line-height: 64px;
+      text-align: center;
+      background: $second-dark-bg;
+    }
+  }
+  /** tetx **/
+  .text {
+    font-size: .78rem;
+  }
+  /** vertical Menu Icons ***/
+  .menu-icons {
+    color: #f2f4ff; 
+    background: $icons-menu-bg;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 2px;
+    text-align: center;
+  }
+  .ivu-menu-vertical.ivu-menu-light:after {
+    display: none;
+  }
+
+  /* Hedare Toolbar */
+  .ivu-layout-header {
+    background: #fff;
+    box-shadow: 0px 10px 30px 0px rgba(82, 63, 105, 0.08);
+    z-index: 2;
+    .menu-icon {
+      transition: all 0.3s;
+    }
+
+    .rotate-icon {
+      transform: rotate(-90deg);
+    }
+  }
+
+  .ivu-menu-vertical {
+    .ivu-menu-submenu-title,
+    .ivu-menu-item {
+      padding: 14px 10px;
+    }
+    .ivu-menu-submenu .ivu-menu-item {
+      padding-left: 20px !important;
+    }
+    .ivu-menu-item-group-title {
+      padding-left: 5px;
+    }
+    $size-chev: 15px;
+    .ivu-menu-submenu-title-icon {
+      right: 10px;
+      background: $icons-menu-bg;
+      border-radius: 50%; 
+      width: $size-chev;
+      height: $size-chev; 
+      line-height: $size-chev; 
+      margin: 0px;
+      text-align: center; 
+      font-size: .7rem;   
+    }
+  }
+  /** Vertical Navbar **/
+  .menu-item {
+    span {
+      display: inline-block;
+      overflow: hidden;
+      width: 69px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+      transition: width 0.2s ease 0.2s;
+    }
+    i:not(.ivu-menu-submenu-title-icon) {
+      transform: translateX(0px);
+      transition: font-size 0.2s ease, transform 0.2s ease;
+      vertical-align: middle;
+      font-size: 16px;
+    }
+
+    &.collapsed-menu {
+      span {
+        width: 0px;
+        transition: width 0.2s ease;
+      }
+
+      i {
+        transform: translateX(5px);
+        transition: font-size 0.2s ease 0.2s, transform 0.2s ease 0.2s;
+        vertical-align: middle;
+        font-size: 22px;
+      }
+
+      .ivu-menu-submenu-title-icon {
+        display: none;
+      }
+    }
+  }
+
+  /** right Horizental Menu **/
+  .ivu-badge {
+    line-height: initial;
+    border-radius: .25rem;
+
+    .navbar-icon.ivu-avatar {
+      color: $default-color;
+      background: transparent;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      font-size: 26px !important;
+    }
+
+    &:hover {
+      transition: all 0.3s;
+      background-color: rgba(77, 89, 149, 0.06);
+    }
+
+    .ivu-badge-count {
+      top: -4px;
+      right: 7px;
+      font-size: 0.6rem;
+    }
+  }
+}
+
+/** Select element in The Head **/
+.select-nav {
+  .ivu-select-selection {
+    border: none;
+    background: rgba(93, 120, 255, 0.08);
+    color: #1d1c1c;
+
+    .ivu-select-placeholder,
+    .ivu-select-selected-value {
+      line-height: 38px !important;
+      font-size: .68rem !important;
+      font-family: $secondary-font;
+    }
+
+    .ivu-select-prefix {
+      float: left;
+      font-size: 18px;
+      padding-top: 8px;
+      padding-left: 10px;
+      color: $default-color;
+    }
+  }
+}
+
+//** remove border Bottom from last cell ***/
+.ivu-cell-group {
+  .ivu-cell:last-child {
+    border-bottom: none !important;
+  }
+}
+
+/** Vertical Navbar Dark Mode #1e1e2d ***/ 
+.theme-bg-color {
+  background: $dark-bg !important;
+  .ivu-menu-vertical,
+  .ivu-menu-opened {
+    background: $second-dark-bg !important;
+    .ivu-menu-submenu-title,
+    .ivu-menu-submenu-title:hover {
+      background: $dark-bg !important;
+    }
+  }
+  .nav-divider {
+    border-top: 1px dashed #3a3a4e;
+  }
+}

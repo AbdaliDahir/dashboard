@@ -1,0 +1,16 @@
+/** responsive **/
+@include device(phone-only) {
+  .hide-xs {
+    display: none !important;
+  }
+  /** Header Navigation dropdowns ***/
+  .navbar-dropdown {
+    .ivu-select-dropdown {
+      max-width: 100%;
+      left: 0px !important;
+      .ivu-dropdown-menu {
+        max-width: 100%;
+      }
+    }
+  }
+}

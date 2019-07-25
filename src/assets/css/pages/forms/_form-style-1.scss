@@ -1,0 +1,19 @@
+.form-style-1 {
+    input,
+    i {
+      border-color: $default-color;
+    }
+    .ivu-input-group-prepend {
+      color: #ffffff; 
+      border-color: $default-color;
+      background-color: $default-color;
+    }
+    .login-input {
+      .ivu-input {
+        height: 45px;
+      }
+    }
+    .ivu-form-item-error .ivu-input-group-prepend { 
+      background-color: #ed4014;
+    }
+  }

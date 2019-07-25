@@ -1,0 +1,36 @@
+//*** Drawer Close **/
+.drawer-access {
+  .ivu-drawer-body {
+    padding: 0px;
+  }
+
+  .ivu-tabs-bar {
+    border-bottom: 4px solid rgba(33, 150, 243, 0.25);
+
+    .ivu-tabs-nav-container,
+    * {
+      overflow: visible;
+    }
+  }
+
+  .ivu-tabs-ink-bar {
+    height: 4px;
+    background-color: #5d78ff;
+    bottom: -3px;
+    color: #5d78ff;
+  }
+}
+
+.ivu-drawer-close .ivu-icon-ios-close,
+.ivu-modal-close .ivu-icon-ios-close {
+  width: 30px;
+  height: 31px;
+  background-color: #f7f8fa;
+  transition: all 0.3s;
+  border-radius: 4px;
+  margin-bottom: 3px;
+
+  &:hover {
+    color: $default-color !important;
+  }
+}

@@ -1,0 +1,19 @@
+.ivu-btn {
+  &.venom-btn-default {
+    padding: 0.25rem .5rem;
+    border: none; 
+    border-radius: 0.25rem;
+    &.transition-3d-hover:hover {
+      transition: all 400ms ease-in-out;
+      box-shadow: 0 4px 11px rgba(#000, 0.35); 
+      transform: translateY(-3px);
+    }
+  }
+  &.default-font-size {
+    font-size: 0.875rem;
+    line-height: 1;
+    i {
+      font-size: 1.3rem;
+    }
+  } 
+}

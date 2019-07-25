@@ -1,0 +1,192 @@
+/** Font **/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700|Poppins:400,500,600|IBM+Plex+Sans:400,500,600,700&display=swap');
+
+html {
+  font-size: 16px;
+}
+#app {
+  font-family: 'Open Sans', "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+.default-font {
+  font-family: $default-font;
+}
+
+.secondary-font {
+  font-family: $secondary-font;
+}
+
+.ibm-font {
+  font-family: $ibm-font;
+}
+
+.font-weight-400 {
+  font-weight: 400 !important;
+}
+
+.font-weight-600 {
+  font-weight: 600 !important;
+}
+
+.font-weight-700 {
+  font-weight: 700 !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
+}
+
+.v-middle {
+  vertical-align: middle;
+}
+
+.float-right {
+  float: right !important;
+}
+
+.bg-transparent {
+  background: transparent !important;
+}
+
+.bg-grey,
+.hover-bg-grey:hover {
+  background-color: $grey-color !important;
+}
+
+.bg-primary,
+.hover-bg-primary:hover {
+  background-color: $default-color !important;
+}
+
+.bg-warning,
+.hover-bg-warning:hover {
+  background-color: $warning-color !important;
+}
+
+.bg-success,
+.hover-bg-success:hover {
+  background-color: $success-color !important;
+}
+
+.bg-danger,
+.hover-bg-danger:hover {
+  background-color: $danger-color !important;
+}
+
+.bg-light,
+.hover-bg-light:hover {
+  background-color: #fff !important;
+}
+
+.color-light,
+.hover-color-light:hover {
+  color: #ffffff !important;
+}
+
+.color-dark,
+.hover-color-dark:hover {
+  color: #131212 !important;
+}
+
+.color-grey,
+.hover-color-grey:hover {
+  color: $grey-color !important;
+}
+
+.color-dark-grey,
+.hover-color-dark-grey:hover {
+  color: $dark-grey !important;
+}
+.color-primary,
+.hover-color-primary:hover {
+  color: $default-color !important;
+}
+
+.color-warning,
+.hover-color-warning:hover {
+  color: $warning-color !important;
+}
+
+.color-success,
+.hover-color-success:hover {
+  color: $success-color !important;
+}
+
+.color-danger,
+.hover-color-danger:hover {
+  color: $danger-color !important;
+}
+
+.color-text {
+  color: #001737;
+}
+.position-relative {
+  position: relative;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.d-block {
+  display: block !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
+.d-flex {
+  display: flex !important;
+}
+
+.border-0 {
+  border: none !important;
+}
+
+.list-unstyled {
+  li {
+    list-style: none;
+  }
+}
+
+// Overlay 
+.overlay {
+  position: relative;
+
+  &:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(#000000, .2);
+  }
+
+  >* {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+/*** Switch Color **/
+.ivu-switch-checked {
+  background: $default-color !important;
+  border-color: $default-color !important;
+}
