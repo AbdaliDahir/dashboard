@@ -1,8 +1,8 @@
 <template>
     <!-- profile page -->
     <div>
-        <Row>
-            <Col :sm="5" :md="6" class="pl-0 pr-0">
+        <Row type="flex">
+            <Col :sm="5" :md="6" class="pl-0 pr-0 bg-light">
                 <sidebar />
             </Col>
             <Col :sm="19" :md="18"> 

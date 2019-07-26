@@ -5,7 +5,7 @@
             <h4 slot="title" class="ibm-font font-13 font-weight-bold color-text">Who i'm :</h4>
             <div class="text-left">
                 <Badge dot>
-                    <Avatar class="large-avatar" shape="square" src="https://htmlstream.com/preview/front-v2.7.0/assets/img/160x160/img2.jpg" icon="ios-person" />
+                    <Avatar class="large-avatar" shape="square" src="https://htmlstream.com/preview/front-v2.9.0/assets/img/100x100/img2.jpg" icon="ios-person" />
                 </Badge> 
                 <div class="d-inline-block pl-10 pr-10 v-middle">
                     <h3 class="font-15 mt-10 ibm-font color-text text-capitalize">Abdelali Dahir</h3>

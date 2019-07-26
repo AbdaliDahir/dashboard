@@ -15,8 +15,10 @@
           </router-link>
         </DropdownItem>
         <DropdownItem>
-          <Icon size="15" type="ios-chatbubbles" class="color-primary pr-10 v-middle v-middle" /> 
-          <span class="v-middle"> Chat </span>
+          <router-link to="/chat-app">
+            <Icon size="15" type="ios-chatbubbles" class="color-primary pr-10 v-middle v-middle" /> 
+            <span class="v-middle"> Chat </span>
+          </router-link>
         </DropdownItem>
         <DropdownItem>
           <Icon size="15" type="ios-people" class="color-primary pr-10 v-middle v-middle" /> 

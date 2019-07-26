@@ -59,9 +59,9 @@ export default new Router({
               component: () => import('./components/profile/myprofile/myprofile.vue')
             }, 
             {
-              path: 'security',
-              name: 'security',
-              component: () => import('./components/profile/security/security.vue')
+              path: 'projects',
+              name: 'projects',
+              component: () => import('./components/profile/projects/projects.vue')
             }, 
             {
               path: 'transaction',
@@ -76,6 +76,11 @@ export default new Router({
           ]
         }
       ]
+    },
+    // Chat
+    {
+      path: '/chat-app', 
+      component: () => import('./views/chat/chat.vue'),
     }
   ]
 })

@@ -3,7 +3,7 @@
         <div class="pt-20 pb-20"> 
             <Button v-for="item in profileitems" :key="item.name" :to="`/profile/${item.name}`" class="border-0 bg-primary ibm-font font-12 pl-20 pr-20 color-light ml-20 mr-20">{{item.label}}</Button> 
             <Divider class="mt-20"/>
-            <div class="pt-50 pb-50 pl-30 px-30">
+            <div class="pb-50 pl-20 pr-10">
                 <router-view></router-view>
             </div>
         </div>
@@ -20,8 +20,8 @@ export default {
                     name: "overview", 
                 },
                 {
-                    label: "Security",
-                    name: "security", 
+                    label: "Projects",
+                    name: "projects", 
                 },
                 {
                     label: "Transactions",
