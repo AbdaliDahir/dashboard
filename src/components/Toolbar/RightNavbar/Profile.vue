@@ -1,5 +1,5 @@
-<template>
-  <Dropdown class="ml-10 text-center navbar-dropdown">
+<template> 
+  <Dropdown class="ml-10 text-center navbar-dropdown" placement="right-start">
     <span class="ivu-badge pl-5 pr-5 pt-5 pb-5">
       <span class="subheading pr-10 hide-xs">
         <b>Hi,</b> Limbo

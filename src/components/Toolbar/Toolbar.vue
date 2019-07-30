@@ -1,7 +1,7 @@
 <template> 
   <Header> 
       <Row type="flex" justify="space-between" class="code-row-bg">
-        <Col :sm="3" :md="3" class="text-left pr-5 pl-5 hide-xs">
+        <Col :xs="0" :md="3" class="text-left pr-5 pl-5 hide-xs">
           <!-- logo -->
           <span class="logo">
             <img src="https://dashboard.zawiastudio.com/demo/img/logo.png" width="40" height="40" class="v-middle"/>
@@ -9,32 +9,26 @@
           </span>
         </Col>
         <!-- left Side -->
-        <Col :xs="24" :sm="10" :md="10" class="text-left pr-5 pl-5 hide-xs">
+        <Col :xs="4" :md="0" :lg="14" class="text-center pr-5 pl-5 Toggle-Nav">
+          <a class="Toggle-Nav-Icon" @click="PrimaryNavbar = true">
+            <Icon type="ios-apps" size="30"/>
+          </a>
+
           <!-- left Component menu -->
-          <LeftMenu />
+          <LeftMenu class="ml-10 d-inline-block hide-xs" v-if="PrimaryNavbar"/>
         </Col>
 
         <!-- Right Side -->
-        <Col :xs="24" :sm="9" :md="9" class="text-right pr-5 pl-5">
+        <Col :xs="20" :md="21" :lg="9" class="text-right pr-5 pl-5">
 
-          <a @click="searchModal = true" class="ivu-badge">
-            <Avatar class="navbar-icon" shape="square" icon="ios-search"/>
+          <a class="ivu-badge" @click="searchModal = true" v-if="!searchModal">
+            <Avatar class="navbar-icon" shape="square" icon="ios-search" />
+          </a>
+
+          <a class="ivu-badge active-badge" @click="searchModal = false" v-else> 
+            <Avatar class="navbar-icon" shape="square" icon="ios-close" />
           </a>
           
-          <!-- Search Modal -->
-          <Modal 
-            v-model="searchModal" 
-            draggable   
-            :styles="{top: '70px'}"
-            title="This is draggable !!!"
-            >
-            <Input size="large" enter-button placeholder="Enter something..." />
-            <div slot="footer">
-              <Button type="primary" size="large" @click="asyncOK()">search</Button>
-              <Button size="large" @click="cancelSearch()">cancel</Button>
-            </div>
-          </Modal>
-
           <!-- Drawer Settings -->
           <!-- <Tooltip content="quick access" placement="right-end"> -->
           <a @click="drawer = true" class="ivu-badge">
@@ -47,7 +41,7 @@
             v-model="drawer"
             :mask-closable="false"
             :styles="styles"
-          class="drawer-access">
+            class="drawer-access">
             <DrawerContent/>
           </Drawer>
 
@@ -62,7 +56,7 @@
             v-model="modelLang"
             size="large"
             prefix="md-globe"
-            class="select-nav text-center ml-10"
+            class="select-nav text-center ml-10 hide-xs"
             style="width:110px"
             placeholder="English"
           >
@@ -79,9 +73,16 @@
 
           <!-- profile Settings -->
           <Profile/>
-        </Col>
-        
+        </Col> 
       </Row> 
+      <!-- Search Modal -->
+          <div class="search-modal mt-20" v-if="searchModal">
+            <Input search enter-button placeholder="Enter something..." />
+            <!-- <div slot="footer">
+              <Button type="primary" size="large" @click="asyncOK()">search</Button>
+              <Button size="large" @click="cancelSearch()">cancel</Button>
+            </div> -->
+          </div>
   </Header> 
 </template>
 
@@ -102,6 +103,7 @@ export default {
   },
   data() {
     return {
+      PrimaryNavbar: false,
       /** Search Modal **/
       searchModal: false,
       drawer: false,
@@ -131,16 +133,6 @@ export default {
     };
   },
   methods: {
-      cancelSearch () { 
-        this.searchModal = false; 
-      },
-      
-      asyncOK () { 
-        setTimeout(() => {
-            this.searchModal = false;
-            this.$Message.info('Asynchronously close the dialog box');
-        }, 1000);
-      }
   }
 };
 </script>
