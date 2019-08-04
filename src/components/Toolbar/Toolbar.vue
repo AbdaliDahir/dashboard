@@ -1,25 +1,25 @@
 <template> 
   <Header> 
       <Row type="flex" justify="space-between" class="code-row-bg">
-        <Col :xs="0" :md="3" class="text-left pr-5 pl-5 hide-xs">
+        <Col :xs="0" :sm="4" :lg="3" class="text-left pr-5 pl-5 hide-xs">
           <!-- logo -->
-          <span class="logo">
+          <span class="logo" :style="{ height: fullWidth+'px' }">
             <img src="https://dashboard.zawiastudio.com/demo/img/logo.png" width="40" height="40" class="v-middle"/>
-            <span class="color-primary font-15 text-uppercase font-weight-700 ibm-font v-middle pl-10">Venom</span>
+            <span class="color-primary font-15 text-uppercase font-weight-700 ibm-font v-middle pl-10 hide-md">Venom</span>
           </span>
         </Col>
         <!-- left Side -->
-        <Col :xs="4" :md="0" :lg="14" class="text-center pr-5 pl-5 Toggle-Nav">
-          <a class="Toggle-Nav-Icon" @click="PrimaryNavbar = true">
+        <Col :xs="4" :sm="0" :lg="9" class="text-center pr-5 pl-5 Toggle-Nav">
+          <a class="Toggle-Nav-Icon show-md" @click="PrimaryNavbar = true">
             <Icon type="ios-apps" size="30"/>
           </a>
 
           <!-- left Component menu -->
-          <LeftMenu class="ml-10 d-inline-block hide-xs" v-if="PrimaryNavbar"/>
+          <LeftMenu class="ml-10 hide-md" v-if="PrimaryNavbar"/>
         </Col>
 
         <!-- Right Side -->
-        <Col :xs="20" :md="21" :lg="9" class="text-right pr-5 pl-5">
+        <Col :xs="20" :sm="20" :lg="12" class="text-right pr-5 pl-5">
 
           <a class="ivu-badge" @click="searchModal = true" v-if="!searchModal">
             <Avatar class="navbar-icon" shape="square" icon="ios-search" />
@@ -34,6 +34,7 @@
           <a @click="drawer = true" class="ivu-badge">
             <Avatar class="navbar-icon" shape="square" icon="ios-apps-outline"/>
           </a>
+
           <!-- </Tooltip> -->
           <Drawer
             title="quick access"
@@ -76,7 +77,7 @@
         </Col> 
       </Row> 
       <!-- Search Modal -->
-          <div class="search-modal mt-20" v-if="searchModal">
+          <div class="search-modal mt-20 mb-10" v-if="searchModal">
             <Input search enter-button placeholder="Enter something..." />
             <!-- <div slot="footer">
               <Button type="primary" size="large" @click="asyncOK()">search</Button>
@@ -103,7 +104,7 @@ export default {
   },
   data() {
     return {
-      PrimaryNavbar: false,
+      PrimaryNavbar: true,
       /** Search Modal **/
       searchModal: false,
       drawer: false,
@@ -129,11 +130,10 @@ export default {
           value: "esp"
         }
       ],
-      modelLang: ""
+      modelLang: "",
     };
   },
-  methods: {
-  }
+  
 };
 </script>
 

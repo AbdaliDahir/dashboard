@@ -14,3 +14,18 @@
     }
   }
 }
+
+@include device(tablet-portrait-up) {
+  .hide-sm {
+    display: none !important;
+  }
+}
+
+@include device(tablet-landscape-up) {
+  .hide-md {
+    display: none !important;
+  }
+  .show-md {
+    display: block !important;
+  }
+}

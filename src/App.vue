@@ -1,5 +1,5 @@
 <template>
-  <div id="app">  
+  <div id="app" :class="{ mobile: mobileActive }">  
     <Layout :style="{minHeight: '100vh'}">
       <!-- Side Navbar -->
       <!-- <Sider ref="side1" hide-trigger class="vertical-sidbar theme-bg-color hide-xs" collapsible :collapsed-width="75" v-model="isCollapsed">
@@ -41,7 +41,19 @@ export default {
   data() {
     return {
       isCollapsed: false,
+      fullWidth: document.documentElement.clientWidth,
+      mobileActive: false,
     };
+  },
+  // bind event handlers to the `handleResize` method (defined below)
+  ready: function () {
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy: function () {
+     window.removeEventListener('resize', this.handleResize)
+  },
+  mounted () {
+    window.addEventListener('resize', this.handleResize)
   },
   computed: {
     rotateIcon() {
@@ -54,6 +66,14 @@ export default {
   methods: {
     collapsedSider() {
       this.$refs.side1.toggleCollapse();
+    },
+    handleResize (event) {
+      this.fullWidth = document.documentElement.clientWidth;
+      if (this.fullWidth <= 900 ) {
+        this.mobileActive = true;
+      } else {
+        this.mobileActive = false;
+      }
     }
   }
 };
