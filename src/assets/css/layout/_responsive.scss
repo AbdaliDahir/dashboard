@@ -21,6 +21,10 @@
   }
 }
 
+.show-md {
+  display: none;
+}
+
 @include device(tablet-landscape-up) {
   .hide-md {
     display: none !important;

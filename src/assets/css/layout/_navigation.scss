@@ -145,7 +145,6 @@
   .ivu-menu-vertical.ivu-menu-light:after {
     display: none;
   }
-
   /* Hedare Toolbar */
   .ivu-layout-header {
     background: #fff;
@@ -157,10 +156,6 @@
     }
     .menu-icon {
       transition: all 0.3s;
-    }
-
-    .rotate-icon {
-      transform: rotate(-90deg);
     }
     // Search Modal
     .search-modal {
@@ -194,10 +189,20 @@
     .ivu-menu-submenu-title {
       border-bottom: 1px solid #f1efef;
       padding-left: 15px;
+      line-height: 0px;
     }
-    .ivu-menu-submenu .ivu-menu-item {
-      padding-top: 10px;
-      padding-bottom: 10px;
+    .ivu-menu-item-group {
+      .ivu-menu-item-group-title {
+        height: 30px;
+        line-height: 30px;
+        font-size: .8rem;
+        padding-left: 15px !important;
+      }
+      .ivu-menu-item {
+        padding-left: 20px !important;
+        padding-bottom: 2px;
+        padding-top: 2px;
+      }
     }
   }
   /** Vertical Navbar **/

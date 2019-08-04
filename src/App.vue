@@ -3,8 +3,8 @@
     <Layout :style="{minHeight: '100vh'}">
       <!-- Side Navbar -->
       <!-- <Sider ref="side1" hide-trigger class="vertical-sidbar theme-bg-color hide-xs" collapsible :collapsed-width="75" v-model="isCollapsed">
-        <!-- lago ->
-        <div class="navbar-logo text-left pt-10 pb-10 pl-10">
+        <!-- lago -->
+        <!-- <div class="navbar-logo text-left pt-10 pb-10 pl-10">
           <!-- <span class="color-grey font-weight-700 font-default">Ve</span>
           <span class="color-primary font-weight-700 secondary-font">nom</span> ->
           <img src="https://dashboard.zawiastudio.com/demo/img/logo.png" width="40" height="40" class="v-middle"/>
@@ -63,11 +63,14 @@ export default {
       return ["menu-item", this.isCollapsed ? "collapsed-menu" : ""];
     }
   },
+  created() { 
+    this.handleResize(); 
+  },
   methods: {
     collapsedSider() {
       this.$refs.side1.toggleCollapse();
     },
-    handleResize (event) {
+    handleResize () {
       this.fullWidth = document.documentElement.clientWidth;
       if (this.fullWidth <= 900 ) {
         this.mobileActive = true;

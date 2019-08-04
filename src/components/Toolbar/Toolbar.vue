@@ -3,19 +3,16 @@
       <Row type="flex" justify="space-between" class="code-row-bg">
         <Col :xs="0" :sm="4" :lg="3" class="text-left pr-5 pl-5 hide-xs">
           <!-- logo -->
-          <span class="logo" :style="{ height: fullWidth+'px' }">
+          <span class="logo">
             <img src="https://dashboard.zawiastudio.com/demo/img/logo.png" width="40" height="40" class="v-middle"/>
             <span class="color-primary font-15 text-uppercase font-weight-700 ibm-font v-middle pl-10 hide-md">Venom</span>
           </span>
         </Col>
         <!-- left Side -->
         <Col :xs="4" :sm="0" :lg="9" class="text-center pr-5 pl-5 Toggle-Nav">
-          <a class="Toggle-Nav-Icon show-md" @click="PrimaryNavbar = true">
-            <Icon type="ios-apps" size="30"/>
-          </a>
-
+          
           <!-- left Component menu -->
-          <LeftMenu class="ml-10 hide-md" v-if="PrimaryNavbar"/>
+          <LeftMenu />
         </Col>
 
         <!-- Right Side -->
@@ -104,7 +101,6 @@ export default {
   },
   data() {
     return {
-      PrimaryNavbar: true,
       /** Search Modal **/
       searchModal: false,
       drawer: false,
